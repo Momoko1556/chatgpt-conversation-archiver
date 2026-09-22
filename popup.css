@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, "Microsoft YaHei", sans-serif;
+}
+
+body {
+  width: 330px;
+  margin: 0;
+  background: Canvas;
+  color: CanvasText;
+}
+
+main { padding: 16px; }
+h1 { margin: 0 0 10px; font-size: 18px; }
+.hint, .foot { line-height: 1.5; color: GrayText; }
+.foot { margin-bottom: 0; font-size: 12px; }
+
+.actions {
+  display: grid;
+  gap: 9px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 14px;
+  background: #10a37f;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .55; cursor: wait; }
+
+button[data-export="markdown"] { background: #2563eb; }
+button[data-export="txt"] { background: #0f766e; }
+button[data-export="images"] { background: #7c3aed; }
+
+pre {
+  min-height: 72px;
+  margin: 12px 0 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: color-mix(in srgb, CanvasText 8%, Canvas);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 12px/1.5 ui-monospace, Consolas, monospace;
+}

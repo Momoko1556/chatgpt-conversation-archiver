@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>归档 ChatGPT 对话</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>归档当前对话</h1>
+    <p class="hint">请先在 ChatGPT 中打开要备份的聊天，然后点击下面的按钮。</p>
+    <section class="actions" aria-label="导出类型">
+      <button type="button" data-export="json">导出 JSON</button>
+      <button type="button" data-export="markdown">导出 Markdown</button>
+      <button type="button" data-export="txt">导出 TXT</button>
+      <button type="button" data-export="images">导出图片</button>
+    </section>
+    <pre id="status" role="status" aria-live="polite">等待开始</pre>
+    <p class="foot">不会保存 Cookie、Authorization 或会话令牌。</p>
+  </main>
+  <script src="background.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
